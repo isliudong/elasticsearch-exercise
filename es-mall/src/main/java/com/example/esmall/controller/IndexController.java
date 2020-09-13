@@ -37,7 +37,7 @@ public class IndexController {
     @ResponseBody
     @GetMapping("/search")
     public List<Map<String, Object>> search(String keyword, int page, int size) throws IOException {
-        return mallService.search(keyword, page, size);
+        return mallService.searchKeyLight(keyword, page, size);
     }
 
 

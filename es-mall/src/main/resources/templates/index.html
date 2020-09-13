@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="utf-8"/>
     <title>ES搜索实战</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/axios.js"></script>
     <script src="js/vue.js"></script>
-
 </head>
 
 <body class="pg">
@@ -20,7 +17,7 @@
                 <div class="headerCon ">
                     <!-- Logo-->
                     <h1 id="mallLogo">
-                        <img th:src="@{/images/jdlogo.png}" alt="">
+                        <img src="/images/jdlogo.png" alt="">
                     </h1>
 
                     <div class="header-extra">
@@ -42,11 +39,11 @@
                                 </fieldset>
                             </form>
                             <ul class="relKeyTop">
-                                <li><a>狂神说Java</a></li>
-                                <li><a>狂神说前端</a></li>
-                                <li><a>狂神说Linux</a></li>
-                                <li><a>狂神说大数据</a></li>
-                                <li><a>狂神聊理财</a></li>
+                                <li><a>Java</a></li>
+                                <li><a>前端</a></li>
+                                <li><a>Linux</a></li>
+                                <li><a>大数据</a></li>
+                                <li><a>理财</a></li>
                             </ul>
                         </div>
                     </div>
@@ -102,11 +99,11 @@
                             </p>
                             <!--标题-->
                             <p class="productTitle">
-                                <a> {{good.title}} </a>
+                                <a v-html="good.title"></a>
                             </p>
                             <!-- 店铺名 -->
                             <div class="productShop">
-                                <span>店铺： 狂神说Java </span>
+                                <span>18号当铺</span>
                             </div>
                             <!-- 成交信息 -->
                             <p class="productStatus">
@@ -140,7 +137,6 @@
             }
         }
     })
-
 </script>
 
 </body>
